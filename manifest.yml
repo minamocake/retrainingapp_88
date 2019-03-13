@@ -1,0 +1,11 @@
+---
+buildpack: nodejs_buildpack
+applications:
+- name: retrainingapp_88
+  command: node start.js
+  path: ./mlretrainingapp
+  memory: 128M
+  services:
+    - sapml88
+  env:
+    SERVICE_BROKER_NAME: sapml88
